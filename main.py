@@ -1,7 +1,5 @@
 import random
 import sys
-import ctypes
-ctypes.windll.kernel32.SetConsoleTitleW("DIOS Local Host")
 from multiprocessing.connection import wait
 import os
 from DIOS.DIOS_Colored import cl
