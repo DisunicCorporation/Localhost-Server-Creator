@@ -1,35 +1,37 @@
 import random
 import sys
+import ctypes
+ctypes.windll.kernel32.SetConsoleTitleW("DIOS Local Host")
 from multiprocessing.connection import wait
 import os
 from DIOS.DIOS_Colored import cl
 from DIOS.res import socketserver
 from DIOS.res import webbrowser
 from DIOS.res.http import server as sv
-
+# 
 backCl  =     cl("#2196f3")
 helpcl  =     cl("#31ff79") 
 inputCl =     cl("#20b2aa")
 urlCl   =     cl("#ff9800")
 pathCl  =     cl("#3f51b5")
 pyvCl   =     cl("#e91e63")
-
+# 
 def logo():
     print(backCl+"""
 
     ░█▀▀▄ ▀█▀ ░█▀▀▀█ ░█▀▀▀█   ░█─── █▀▀█ █▀▀ █▀▀█ █──   ░█─░█ █▀▀█ █▀▀ ▀▀█▀▀ 
     ░█─░█ ░█─ ░█──░█ ─▀▀▀▄▄   ░█─── █──█ █── █▄▄█ █──   ░█▀▀█ █──█ ▀▀█ ──█── 
     ░█▄▄▀ ▄█▄ ░█▄▄▄█ ░█▄▄▄█   ░█▄▄█ ▀▀▀▀ ▀▀▀ ▀──▀ ▀▀▀   ░█─░█ ▀▀▀▀ ▀▀▀ ──▀──
-                     __________________________________
-                    |                                  |
-                    |     From Disunic Corporation     |
-                    |__________________________________|
-                                                                                """)
+
+    |`````````````````````````````````````````````````````````````````````````|
+    |  From Disunic Corporation                       Creator - Souvik Nandi  |
+    |                                                                         |
+    ```````````````````````````````````````````````````````````````````````````    """)
 logo()
 def helping():print(helpcl+"""
         # Help Section :
 
-        Type : " 1 " , to start local host in random server.
+        Type : " 1 " , to start local host in random port.
 
         Type : " 2 " , to start local host,in the port number which typed by you.
     """)
